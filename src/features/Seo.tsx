@@ -1,10 +1,9 @@
 import { useRouter } from "next/router";
-import { useContext } from "react";
 import { NextSeo } from "next-seo";
 
 const Seo = ({ seo }: any) => {
     const { asPath } = useRouter();
-  const url = `${process.env.NEXT_PUBLIC_CAREER_SITE_BASE_URL}${asPath}`;
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}${asPath}`;
   return (
     <NextSeo
       title={seo?.metaTitle}
